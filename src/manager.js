@@ -223,7 +223,7 @@ Manager.prototype.disconnect = function() {
     this.cleanup()
   }
   this.readyState = 'closed'
-  if (this.engine) this.engine.close()
+  if (this.engine) this.engine.destroy()
 }
 
 /**
