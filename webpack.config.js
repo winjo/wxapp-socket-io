@@ -33,3 +33,13 @@ module.exports = {
     }),
   ],
 }
+
+if (ENV === 'production') {
+  module.exports.output.path = path.join(__dirname, './build')
+  module.exports.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false,
+    },
+    sourceMap: false,
+  }))
+}
