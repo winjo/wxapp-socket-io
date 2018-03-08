@@ -983,6 +983,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.id = null;
 	  this.writeBuffer = [];
 	  this.prevBufferLen = 0;
+	  wx.closeSocket();
 	};
 	
 	function decodePacket(data) {
