@@ -144,6 +144,7 @@ Engine.prototype.destroy = function() {
   this.id = null
   this.writeBuffer = []
   this.prevBufferLen = 0
+  wx.closeSocket()
 }
 
 function decodePacket(data) {
